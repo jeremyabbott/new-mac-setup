@@ -1,23 +1,25 @@
 # new-mac-setup
 
+This post is in part inspired by John Papa's [The First 10 macOS Apps I Install in 2019 ](https://dev.to/azure/the-first-10-macos-apps-i-install-in-2019-2bba). However, I wanted to emphasize what it feels like setting up developer tooling on macOS 10.15, and what my experience was using zsh for the first time.
+
 Scripts and notes regarding tools/apps I install when I get a new laptop. In general, I want to be able to build/run a [SAFE Stack Application](https://safe-stack.github.io/) when setup is finished. To accomplish this I'll need
 
 1. .NET Core
-2. Node
+2. Node (we're going to use nvm for this)
 3. (Optional) Yarn
 4. (Optional) Docker (this could also be the first step if you only need/want to work in a .devcontainer)
 
 Before we get into installing our developer tools though, we'll need to do some housekeeping.
+
+## Install OS Updates
+
+This is especially worthwhile with macOS Catalina being so new and lamentably buggy. It's especially important if you (like me 💪🏼) treated yourself to the new 16" MacBook Pro because you'll want to make sure you have the latest driver and firmware updates. It's also just a good idea in case there are any security fixes (🤞🏽).
 
 ## Remove Crap from the Dock
 
 On a clean macOS install there's going to be a bunch of stuff on the dock that you probably don't want. Get rid of it 😉!
 
 ![Alt text](https://github.com/jeremyabbott/new-mac-setup/raw/master/images/removefromdock.png "Remove crap from dock")
-
-## Install OS Updates
-
-This is especially worthwhile with macOS Catalina being so new and lamentably buggy. It's especially important if you (like me 💪🏼) treated yourself to the new 16" MacBook Pro. Applying updates ASAP will ensure you have the latest drivers installed.
 
 ## Password Manager
 
@@ -68,20 +70,20 @@ However, I also saw this tidbit
 
 Cool... Looking at the [`zsh-nvm`](https://github.com/lukechilds/zsh-nvm#installation) installation instructions, it lists [Antigen](https://github.com/zsh-users/antigen) first. Well that doesn't sound scary at all.
 
-Antigen manages plugins for zsh. Before this little adventure, I didn't even know there were plugins for zsh. As it turns out, we can install antigen via homebrew
+Antigen manages plugins for zsh. Before this little adventure I didn't even know there were plugins for zsh. As it turns out we can install antigen via homebrew
 
 ```zsh
 brew install antigen
 ```
 
-After antigen is installed, do the following:
+After antigen is installed do the following
 
 ```zsh
 cd $HOME
 touch .zshrc #creates the file if it doesn't exist
 ```
 
-Then add this to .zshrc
+Then add this to your .zshrc
 
 ```
 source /usr/local/share/antigen/antigen.zsh
@@ -91,8 +93,7 @@ antigen bundle lukechilds/zsh-nvm
 antigen apply
 ```
 
-Plot twist: you can also install antigen first, and then setup Homebrew as an Antigen bundle. I'm not sure which step is better.
-
+Plot twist: you can also install antigen before Homebrew, and then setup Homebrew as an Antigen bundle. I'm not sure which step is better.
 
 With `nvm` finally installed
 
@@ -138,8 +139,6 @@ dotnet new -i SAFE.Template # you should be using the safe stack https://safe-st
 I literally went through all that work (above) to get `nvm` installed so that I could build `SAFE Stack` apps.
 
 ## Wrapping Up
-
-This post was in part inspired by John Papa's [The First 10 macOS Apps I Install in 2019 ](https://dev.to/azure/the-first-10-macos-apps-i-install-in-2019-2bba). However, I wanted to emphasize what it feels like setting up developer tooling on macOS 10.15, and what my experience was using zsh for the first time.
 
 A copy of my current `.zshrc` can be found [here](https://github.com/jeremyabbott/new-mac-setup/blob/master/.zshrc).
 
