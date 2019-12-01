@@ -60,7 +60,7 @@ With macOS Catalina, macOS uses zsh as the default terminal instead of bash. Fro
 
 > Homebrew installation is not supported. If you have issues with homebrew-installed nvm, please brew uninstall it, and install it using the instructions below, before filing an issue.
 
-Well 💩. That's okay, we'll use Homebrew for a lot of other stuff.
+Well 💩.
 
 However, I also saw this tidbit
 
