@@ -43,11 +43,16 @@ brew cask install visual-studio-code
 brew cask install dropbox
 ```
 
+**After you install VS Code you're going to have to do some permission tweaking.**
+
 ### Homebrew or App Store?
 
 At least 1Password can be installed via Homebrew as well as available in the App Store. Which way should you do it? My best guess is honestly personal preference. For things that I just need to work no matter what (like password access), I think something from the App Store has a better change of working correctly after a major OS upgrade. I don't have any evidence this to back this up though, so let's go with personal preference. 🤷🏽‍♂️
 
-After you install VS Code you're going to have to do some permission tweaking. 
+Other apps I installed via the App Store
+
+* [One Note](https://apps.apple.com/us/app/microsoft-onenote/id784801555?mt=12)
+* [Slack](https://apps.apple.com/us/app/slack/id803453959?mt=12)
 
 ## Antigen
 
